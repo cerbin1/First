@@ -1,6 +1,8 @@
 package com.example.bartek.myfirstapp;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -39,8 +41,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void click(View view) {
         counter++;
+
+        TextView result = (TextView) findViewById(R.id.result);
+
         TextView textView = (TextView) findViewById(R.id.numberOfClicks);
         String count = Integer.toString(counter);
         textView.setText(count);
+        if (counter == 1) {
+            TextView textView1 = (TextView) findViewById(R.id.textView1);
+            textView1.setBackgroundColor(Color.GRAY);
+            textView1.setTypeface(null, Typeface.BOLD);
+        }
     }
 }
