@@ -57,9 +57,37 @@ public class MainActivity extends AppCompatActivity {
         }
         if(counter == 10) {
             TextView textView10 = (TextView) findViewById(R.id.textView10);
-            textView10.setBackgroundColor(Color.GRAY);
+            textView10.setBackgroundColor(Color.BLUE);
             textView10.setTypeface(null, Typeface.BOLD);
-            text = "Brawo! Udalo Ci sie raz kliknac!";
+            text = "UUU, pędzisz jak rakieta :)";
+            result.setText(text);
+        }
+        if(counter == 50) {
+            TextView textView50 = (TextView) findViewById(R.id.textView50);
+            textView50.setBackgroundColor(Color.MAGENTA);
+            textView50.setTypeface(null, Typeface.BOLD);
+            text = "DEWEJ JUZEF!!!";
+            result.setText(text);
+        }
+        if(counter == 100) {
+            TextView textView100 = (TextView) findViewById(R.id.textView100);
+            textView100.setBackgroundColor(Color.CYAN);
+            textView100.setTypeface(null, Typeface.BOLD);
+            text = "SETA!!! SZYBSZY NIZ HUSAJN BOLT";
+            result.setText(text);
+        }
+        if(counter == 500) {
+            TextView textView500 = (TextView) findViewById(R.id.textView500);
+            textView500.setBackgroundColor(Color.GREEN);
+            textView500.setTypeface(null, Typeface.BOLD);
+            text = "MISZCZ. Maklowicz approves. Dasz rade ubic 10k?";
+            result.setText(text);
+        }
+        if(counter == 500) {
+            TextView textView10000 = (TextView) findViewById(R.id.textView10000);
+            textView10000.setBackgroundColor(Color.RED);
+            textView10000.setTypeface(null, Typeface.BOLD);
+            text = "WYGRALES 2 ZIEMNIAKI. PO ODBIOR PROSZE ZGLOSIC SIE DO WYKLADOWCY PO ZAJECIACH";
             result.setText(text);
         }
     }
