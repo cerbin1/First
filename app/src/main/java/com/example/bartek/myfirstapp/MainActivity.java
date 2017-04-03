@@ -41,13 +41,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void click(View view) {
         counter++;
-        String text;
-
-        TextView result = (TextView) findViewById(R.id.result);
-
         TextView textView = (TextView) findViewById(R.id.numberOfClicks);
         String count = Integer.toString(counter);
         textView.setText(count);
+
+
+
+        TextView result = (TextView) findViewById(R.id.result);
+        String text;
+
         if (counter == 1) {
             TextView textView1 = (TextView) findViewById(R.id.textView1);
             textView1.setBackgroundColor(Color.GRAY);
@@ -96,6 +98,46 @@ public class MainActivity extends AppCompatActivity {
             textView10000.setTypeface(null, Typeface.BOLD);
             text = "WYGRALES 2 ZIEMNIAKI. PO ODBIOR PROSZE ZGLOSIC SIE DO WYKLADOWCY PO ZAJECIACH";
             result.setText(text);
+        }
+
+
+
+        if (counter == 1) {
+            TextView textView1 = (TextView) findViewById(R.id.textView1);
+            textView1.setBackgroundColor(Color.GRAY);
+            textView1.setTypeface(null, Typeface.BOLD);
+        }
+        if (counter == 10) {
+            TextView textView10 = (TextView) findViewById(R.id.textView10);
+            textView10.setBackgroundColor(Color.BLUE);
+            textView10.setTypeface(null, Typeface.BOLD);
+        }
+        if (counter == 50) {
+            TextView textView50 = (TextView) findViewById(R.id.textView50);
+            textView50.setBackgroundColor(Color.MAGENTA);
+            textView50.setTypeface(null, Typeface.BOLD);
+        }
+        if (counter == 100) {
+            TextView textView100 = (TextView) findViewById(R.id.textView100);
+            textView100.setBackgroundColor(Color.CYAN);
+            textView100.setTypeface(null, Typeface.BOLD);
+            text = "SETA!!! SZYBSZY NIZ HUSAJN BOLT";
+            result.setText(text);
+        }
+        if (counter == 200) {
+            TextView textView200 = (TextView) findViewById(R.id.textView200);
+            textView200.setBackgroundColor(Color.YELLOW);
+            textView200.setTypeface(null, Typeface.BOLD);
+        }
+        if (counter == 500) {
+            TextView textView500 = (TextView) findViewById(R.id.textView500);
+            textView500.setBackgroundColor(Color.GREEN);
+            textView500.setTypeface(null, Typeface.BOLD);
+        }
+        if (counter == 10000) {
+            TextView textView10000 = (TextView) findViewById(R.id.textView10000);
+            textView10000.setBackgroundColor(Color.RED);
+            textView10000.setTypeface(null, Typeface.BOLD);
         }
     }
 }
