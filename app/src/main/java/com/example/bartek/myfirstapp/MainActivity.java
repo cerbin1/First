@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void click(View view) {
         counter++;
+        String text;
 
         TextView result = (TextView) findViewById(R.id.result);
 
@@ -51,6 +52,15 @@ public class MainActivity extends AppCompatActivity {
             TextView textView1 = (TextView) findViewById(R.id.textView1);
             textView1.setBackgroundColor(Color.GRAY);
             textView1.setTypeface(null, Typeface.BOLD);
+            text = "Brawo! Udalo Ci sie raz kliknac!";
+            result.setText(text);
+        }
+        if(counter == 10) {
+            TextView textView10 = (TextView) findViewById(R.id.textView10);
+            textView10.setBackgroundColor(Color.GRAY);
+            textView10.setTypeface(null, Typeface.BOLD);
+            text = "Brawo! Udalo Ci sie raz kliknac!";
+            result.setText(text);
         }
     }
 }
