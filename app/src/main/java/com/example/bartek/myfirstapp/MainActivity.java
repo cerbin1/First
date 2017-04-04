@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                 TextView textView10000 = (TextView) findViewById(R.id.textView10000);
                 textView10000.setBackgroundColor(RED);
                 textView10000.setTypeface(null, BOLD);
-                text = "WYGRALES 2 ZIEMNIAKI. PO ODBIOR PROSZE ZGLOSIC SIE DO WYKLADOWCY PO ZAJECIACH";
+                text = "WYGRALES 2 ZIEMNIAKI. PO ODBIOR PROSZE SIE ZGLOSIC 30 LUTEGO 2018";
                 result.setText(text);
             }
         } else {
