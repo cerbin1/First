@@ -9,7 +9,7 @@
     tools:layout_editor_absoluteY="81dp">
 
     <TextView
-        android:id="@+id/result"
+        android:id="@+id/cheat"
         android:layout_width="115dp"
         android:layout_height="63dp"
         android:layout_marginEnd="16dp"
@@ -19,14 +19,14 @@
         tools:layout_editor_absoluteY="523dp" />
 
     <TextView
-        android:id="@+id/numberOfClicks"
+        android:id="@+id/clicksCount"
         android:layout_width="110dp"
         android:layout_height="47dp"
         android:text="0"
         android:textAlignment="center"
         android:textSize="24sp"
-        tools:layout_editor_absoluteY="509dp"
-        tools:layout_editor_absoluteX="110dp" />
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="509dp" />
 
     <TextView
         android:id="@+id/achievments"
@@ -228,20 +228,12 @@
         tools:layout_editor_absoluteY="372dp" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/button"
         android:layout_width="229dp"
         android:layout_height="151dp"
         app:srcCompat="@mipmap/button"
-        tools:layout_editor_absoluteY="92dp"
-        tools:layout_editor_absoluteX="91dp" />
-
-    <TextView
-        android:id="@+id/textView29"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="233dp"
-        tools:layout_editor_absoluteY="512dp" />
+        tools:layout_editor_absoluteX="91dp"
+        tools:layout_editor_absoluteY="92dp" />
 
 
 </android.support.constraint.ConstraintLayout>
