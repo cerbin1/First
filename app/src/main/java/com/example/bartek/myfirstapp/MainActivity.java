@@ -1,8 +1,6 @@
 package com.example.bartek.myfirstapp;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -43,6 +41,12 @@ public class MainActivity extends AppCompatActivity {
         textView.setText(result);
     }
 
+    public void test(View view) {
+        CheckBox checkBox = (CheckBox) findViewById(R.id.checkBox);
+        checkBox.setChecked(true);
+
+    }
+
     public void click(View view) {
         counter++;
         TextView textView = (TextView) findViewById(R.id.numberOfClicks);
@@ -50,96 +54,76 @@ public class MainActivity extends AppCompatActivity {
         textView.setText(count);
 
         CheckBox checkBox = (CheckBox) findViewById(R.id.checkBox);
+//        CheckBox morePowerfulClicks = (CheckBox) findViewById(R.id.morePowerfulClicks);
 
         if (checkBox.isChecked()) {
+            counter += 99;
+            if (counter == 1) {
+                changeDisplayOf(R.id.textView1, GRAY);
+            }
+            if (counter == 10) {
+                changeDisplayOf(R.id.textView10, BLUE);
+            }
+            if (counter == 50) {
+                changeDisplayOf(R.id.textView50, MAGENTA);
+            }
+            if (counter == 100) {
+                changeDisplayOf(R.id.textView100, CYAN);
+            }
+            if (counter == 200) {
+                changeDisplayOf(R.id.textView200, YELLOW);
+            }
+            if (counter == 500) {
+                changeDisplayOf(R.id.textView500, GREEN);
+            }
+            if (counter == 10000) {
+                changeDisplayOf(R.id.textView10000, RED);
+            }
+        } else {
             TextView result = (TextView) findViewById(R.id.result);
             String text;
 
             if (counter == 1) {
-                TextView textView1 = (TextView) findViewById(R.id.textView1);
-                textView1.setBackgroundColor(GRAY);
-                textView1.setTypeface(null, BOLD);
+                changeDisplayOf(R.id.textView1, GRAY);
                 text = "Brawo! Udalo Ci sie raz kliknac!";
                 result.setText(text);
             }
             if (counter == 10) {
-                TextView textView10 = (TextView) findViewById(R.id.textView10);
-                textView10.setBackgroundColor(BLUE);
-                textView10.setTypeface(null, BOLD);
+                changeDisplayOf(R.id.textView10, BLUE);
                 text = "UUU, pędzisz jak rakieta :)";
                 result.setText(text);
             }
             if (counter == 50) {
-                TextView textView50 = (TextView) findViewById(R.id.textView50);
-                textView50.setBackgroundColor(MAGENTA);
-                textView50.setTypeface(null, BOLD);
+                changeDisplayOf(R.id.textView50, MAGENTA);
                 text = "DEWEJ JUZEF!!!";
                 result.setText(text);
             }
             if (counter == 100) {
-                TextView textView100 = (TextView) findViewById(R.id.textView100);
-                textView100.setBackgroundColor(CYAN);
-                textView100.setTypeface(null, BOLD);
+                changeDisplayOf(R.id.textView100, CYAN);
                 text = "SETA!!! SZYBSZY NIZ HUSAJN BOLT";
                 result.setText(text);
             }
             if (counter == 200) {
-                TextView textView200 = (TextView) findViewById(R.id.textView200);
-                textView200.setBackgroundColor(YELLOW);
-                textView200.setTypeface(null, BOLD);
+                changeDisplayOf(R.id.textView200, YELLOW);
                 text = "ANDRZEJ ZROBILES TO!!!ONE";
                 result.setText(text);
             }
             if (counter == 500) {
-                TextView textView500 = (TextView) findViewById(R.id.textView500);
-                textView500.setBackgroundColor(GREEN);
-                textView500.setTypeface(null, BOLD);
+                changeDisplayOf(R.id.textView500, GREEN);
                 text = "MISZCZ. Maklowicz approves. Dasz rade ubic 10k?";
                 result.setText(text);
             }
             if (counter == 10000) {
-                TextView textView10000 = (TextView) findViewById(R.id.textView10000);
-                textView10000.setBackgroundColor(RED);
-                textView10000.setTypeface(null, BOLD);
+                changeDisplayOf(R.id.textView10000, RED);
                 text = "WYGRALES 2 ZIEMNIAKI. PO ODBIOR PROSZE SIE ZGLOSIC 30 LUTEGO 2018";
                 result.setText(text);
             }
-        } else {
-            if (counter == 1) {
-                TextView textView1 = (TextView) findViewById(R.id.textView1);
-                textView1.setBackgroundColor(GRAY);
-                textView1.setTypeface(null, BOLD);
-            }
-            if (counter == 10) {
-                TextView textView10 = (TextView) findViewById(R.id.textView10);
-                textView10.setBackgroundColor(BLUE);
-                textView10.setTypeface(null, BOLD);
-            }
-            if (counter == 50) {
-                TextView textView50 = (TextView) findViewById(R.id.textView50);
-                textView50.setBackgroundColor(MAGENTA);
-                textView50.setTypeface(null, BOLD);
-            }
-            if (counter == 100) {
-                TextView textView100 = (TextView) findViewById(R.id.textView100);
-                textView100.setBackgroundColor(CYAN);
-                textView100.setTypeface(null, BOLD);
-            }
-            if (counter == 200) {
-                TextView textView200 = (TextView) findViewById(R.id.textView200);
-                textView200.setBackgroundColor(YELLOW);
-                textView200.setTypeface(null, BOLD);
-            }
-            if (counter == 500) {
-                TextView textView500 = (TextView) findViewById(R.id.textView500);
-                textView500.setBackgroundColor(GREEN);
-                textView500.setTypeface(null, BOLD);
-            }
-            if (counter == 10000) {
-                TextView textView10000 = (TextView) findViewById(R.id.textView10000);
-                textView10000.setBackgroundColor(RED);
-                textView10000.setTypeface(null, BOLD);
-            }
         }
+    }
+
+    private void changeDisplayOf(int id, int color) {
+        TextView textView1 = (TextView) findViewById(id);
+        textView1.setBackgroundColor(color);
+        textView1.setTypeface(null, BOLD);
     }
 }
