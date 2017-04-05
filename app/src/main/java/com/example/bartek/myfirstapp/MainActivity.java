@@ -1,19 +1,18 @@
 package com.example.bartek.myfirstapp;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import static android.graphics.Color.*;
-import static android.graphics.Color.BLUE;
 import static android.graphics.Color.CYAN;
 import static android.graphics.Color.GREEN;
 import static android.graphics.Color.RED;
 import static android.graphics.Color.YELLOW;
+import static android.graphics.Color.parseColor;
 import static android.graphics.Typeface.BOLD;
-import static com.example.bartek.myfirstapp.R.*;
+import static com.example.bartek.myfirstapp.R.id;
+import static com.example.bartek.myfirstapp.R.layout;
 
 public class MainActivity extends AppCompatActivity {
     private int counter = 0;
