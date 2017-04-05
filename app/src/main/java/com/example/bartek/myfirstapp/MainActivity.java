@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             changeDisplayOf(R.id.achievement5000, GREEN);
         }
         if (counter >= 6000) {
-            changeDisplayOf(R.id.achievement6000, BLUE);
+            changeDisplayOf(R.id.achievement1, Color.parseColor("#1f92f2"));
         }
         if (counter >= 7000) {
             changeDisplayOf(R.id.achievement7000, Color.parseColor("#9B30FF"));
