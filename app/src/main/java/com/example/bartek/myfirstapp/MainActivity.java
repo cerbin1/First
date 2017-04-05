@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.bartek.myfirstapp.MESSAGE";
 
     private int counter = 0;
+    private boolean isCheatEnabled = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,83 +27,74 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void test(View view) {
-        CheckBox checkBox = (CheckBox) findViewById(R.id.checkBox);
-        checkBox.setChecked(true);
-
-    }
-
     public void click(View view) {
-        counter++;
-        TextView textView = (TextView) findViewById(R.id.numberOfClicks);
+
+        if (isCheatEnabled) {
+            counter += 100;
+        } else {
+            counter++;
+        }
+
+        TextView textView = (TextView) findViewById(R.id.clicksCount);
         String count = Integer.toString(counter);
         textView.setText(count);
 
-        CheckBox checkBox = (CheckBox) findViewById(R.id.checkBox);
-//        CheckBox morePowerfulClicks = (CheckBox) findViewById(R.id.morePowerfulClicks);
-
-        if (checkBox.isChecked()) {
-            counter += 99;
-            if (counter == 1) {
-                changeDisplayOf(R.id.textView1, GRAY);
-            }
-            if (counter == 10) {
-                changeDisplayOf(R.id.textView10, BLUE);
-            }
-            if (counter == 50) {
-                changeDisplayOf(R.id.textView50, MAGENTA);
-            }
-            if (counter == 100) {
-                changeDisplayOf(R.id.textView100, CYAN);
-            }
-            if (counter == 200) {
-                changeDisplayOf(R.id.textView200, YELLOW);
-            }
-            if (counter == 500) {
-                changeDisplayOf(R.id.textView500, GREEN);
-            }
-            if (counter == 10000) {
-                changeDisplayOf(R.id.textView10000, RED);
-            }
-        } else {
-            TextView result = (TextView) findViewById(R.id.result);
-            String text;
-
-            if (counter == 1) {
-                changeDisplayOf(R.id.textView1, GRAY);
-                text = "Brawo! Udalo Ci sie raz kliknac!";
-                result.setText(text);
-            }
-            if (counter == 10) {
-                changeDisplayOf(R.id.textView10, BLUE);
-                text = "UUU, pędzisz jak rakieta :)";
-                result.setText(text);
-            }
-            if (counter == 50) {
-                changeDisplayOf(R.id.textView50, MAGENTA);
-                text = "DEWEJ JUZEF!!!";
-                result.setText(text);
-            }
-            if (counter == 100) {
-                changeDisplayOf(R.id.textView100, CYAN);
-                text = "SETA!!! SZYBSZY NIZ HUSAJN BOLT";
-                result.setText(text);
-            }
-            if (counter == 200) {
-                changeDisplayOf(R.id.textView200, YELLOW);
-                text = "ANDRZEJ ZROBILES TO!!!ONE";
-                result.setText(text);
-            }
-            if (counter == 500) {
-                changeDisplayOf(R.id.textView500, GREEN);
-                text = "MISZCZ. Maklowicz approves. Dasz rade ubic 10k?";
-                result.setText(text);
-            }
-            if (counter == 10000) {
-                changeDisplayOf(R.id.textView10000, RED);
-                text = "WYGRALES 2 ZIEMNIAKI. PO ODBIOR PROSZE SIE ZGLOSIC 30 LUTEGO 2018";
-                result.setText(text);
-            }
+        if (counter == 1) {
+            changeDisplayOf(R.id.achievement1, GRAY);
+        }
+        if (counter == 5) {
+            changeDisplayOf(R.id.achievement5, GRAY);
+        }
+        if (counter == 10) {
+            changeDisplayOf(R.id.achievement10, GRAY);
+        }
+        if (counter == 20) {
+            changeDisplayOf(R.id.achievement20, GRAY);
+        }
+        if (counter == 50) {
+            changeDisplayOf(R.id.achievement50, GRAY);
+        }
+        if (counter == 75) {
+            changeDisplayOf(R.id.achievement75, GRAY);
+        }
+        if (counter == 100) {
+            changeDisplayOf(R.id.achievement100, GRAY);
+        }
+        if (counter == 200) {
+            changeDisplayOf(R.id.achievement200, GRAY);
+        }
+        if (counter == 300) {
+            changeDisplayOf(R.id.achievement300, GRAY);
+        }
+        if (counter == 400) {
+            changeDisplayOf(R.id.achievement400, GRAY);
+        }
+        if (counter == 500) {
+            changeDisplayOf(R.id.achievement500, GRAY);
+        }
+        if (counter == 1000) {
+            changeDisplayOf(R.id.achievement1000, GRAY);
+        }
+        if (counter == 2000) {
+            changeDisplayOf(R.id.achievement2000, GRAY);
+        }
+        if (counter == 3000) {
+            changeDisplayOf(R.id.achievement3000, GRAY);
+        }
+        if (counter == 4000) {
+            changeDisplayOf(R.id.achievement4000, GRAY);
+        }
+        if (counter == 5000) {
+            changeDisplayOf(R.id.achievement5000, GRAY);
+        }
+        if (counter == 6000) {
+            changeDisplayOf(R.id.achievement6000, GRAY);
+        }
+        if (counter == 7000) {
+            changeDisplayOf(R.id.achievement7000, GRAY);
+        }
+        if (counter == 10000) {
+            changeDisplayOf(R.id.achievement10000, GRAY);
         }
     }
 
