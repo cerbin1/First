@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.bartek.myfirstapp.MESSAGE";
 
     private int counter = 0;
-    private boolean isCheatEnabled = false;
+    private boolean cheats = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void click(View view) {
 
-        if (isCheatEnabled) {
+        if (cheats) {
             counter += 100;
         } else {
             counter++;
@@ -100,5 +100,9 @@ public class MainActivity extends AppCompatActivity {
         TextView textView1 = (TextView) findViewById(id);
         textView1.setBackgroundColor(color);
         textView1.setTypeface(null, BOLD);
+    }
+
+    public void toggleCheats(View view) {
+        this.cheats = !cheats;
     }
 }
