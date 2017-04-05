@@ -14,8 +14,6 @@ import static android.graphics.Color.YELLOW;
 import static android.graphics.Typeface.BOLD;
 
 public class MainActivity extends AppCompatActivity {
-    public static final String EXTRA_MESSAGE = "com.example.bartek.myfirstapp.MESSAGE";
-
     private int counter = 0;
     private boolean cheats = false;
 
